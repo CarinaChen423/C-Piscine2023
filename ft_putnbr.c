@@ -1,34 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zhchen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:24:14 by zhchen            #+#    #+#             */
-/*   Updated: 2023/12/02 17:37:49 by zhchen           ###   ########.fr       */
+/*   Created: 2023/12/02 17:48:41 by zhchen            #+#    #+#             */
+/*   Updated: 2023/12/03 18:27:53 by zhchen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
-	int	counter;
-
-	i = 0;
-	counter = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-		counter++;
-	}
-	return (counter);
+	write(1, &c, 1);
 }
 
-/*#include <stdio.h>
-
-int	main()
+void	ft_putnbr(int nb)
 {
-	char t[] = "Hello";
-	printf("%d", ft_strlen(t));
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
+	}
+	else
+	{
+		if (nb < 0)
+		{
+			ft_putchar('-');
+			nb = -nb;
+		}
+		if (nb > 9)
+		{
+			ft_putnbr(nb / 10);
+		}
+		ft_putchar(nb % 10 + '0');
+	}
+}
+
+/*int	main()
+{
+	ft_putnbr(-2147483648);
 }*/

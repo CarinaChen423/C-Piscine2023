@@ -5,11 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zhchen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 17:01:03 by zhchen            #+#    #+#             */
-/*   Updated: 2023/11/26 17:55:43 by zhchen           ###   ########.fr       */
+/*   Created: 2023/12/02 17:39:15 by zhchen            #+#    #+#             */
+/*   Updated: 2023/12/03 18:20:46 by zhchen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putstr(char *str)
@@ -19,15 +18,15 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		write(1, &str[i], 1);
+		write (1, &str[i], 1);
 		i++;
 	}
 }
 
-/*int	main(void)
+/*int	main()
 {
-	char	*test;
-
-	test = "Hello, World!";
-	ft_putstr(test);
+	char t[] = "Hello, World";
+	ft_putstr(t);
+	return 0;
+	
 }*/
