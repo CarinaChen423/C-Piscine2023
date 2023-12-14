@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   maff_alpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zhchen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/14 20:40:33 by zhchen            #+#    #+#             */
-/*   Updated: 2023/12/14 20:44:00 by zhchen           ###   ########.fr       */
+/*   Created: 2023/12/14 20:48:26 by zhchen            #+#    #+#             */
+/*   Updated: 2023/12/14 20:49:11 by zhchen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+int	main()
 {
-	int	i;
-
-	i = '0';
-	while (i <= '9')
-	{
-		write(1, &i, 1);
-		i++;
-	}
+	write(1, "aBcDeFgHiJkLmNoPqRsTuVwXyZ\n", 27);
+	return(0);
 }
